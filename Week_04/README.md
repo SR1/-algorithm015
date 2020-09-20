@@ -128,6 +128,21 @@ https://leetcode-cn.com/problems/number-of-islands/
 1. 使用`auto& element = queue.front(); queue.pop_front(); element.first; element.second;`获取并移除队列的第一个元素，再对元素进行访问。可能会因为超过 `queue` 的 capacity ，queue 内部删除了元素，导致访问元素操作出现异常
 2. 广度优先搜索的实现涉及元素的创建，可能会带来额外的开销，导致超时
 
+#### 贪心算法
+
+##### 柠檬水找零
+https://leetcode-cn.com/problems/lemonade-change/
+
+*实现思路:* 
+贪心算法
+因为题目中的货币面值满足小额可以整除大额的特性，因此可以尽可能将最大额的钞票找出去，留下小额的用于应对小额找零
+
+*实现难点:*
+1. 需要注意，使用大额面值找零后，需要减去已找的钱数
+2. 由于此题的可能的面额有限，找零的 Case 很少，可以简单对各种可能的输入做分支判断处理
+
+*进一步优化:*
+提前比较，而不是计算后再比较，可减少几个指令(理论上有优化，实际效果不大)
 
 ### 本周实战篇
 
