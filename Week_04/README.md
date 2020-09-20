@@ -25,3 +25,37 @@
 4. 适用场景的问题特征:
 	 - 问题可分解成子问题
 	 - 子问题的最优解可递推到最终问题的最优解(最优子结构)
+
+## 二分查找的实现和特性
+
+1. 二分查找的适用条件:
+	- 数据的目标函数具有单调性
+	- 存在上下界
+	- 可以通过索引访问到数据
+2. 代码模板:
+	- C++
+		```cpp
+		int binarySearch(const vector<int>& nums, int target) {
+			int left = 0, right = (int) nums.size() - 1;
+			while (left <= right) {
+				int mid = left + (right - left) / 2;
+				if (nums[mid] == target) return mid;
+				if (nums[mid] < target) left = mid + 1;
+				else right = mid - 1;
+			}
+			return -1;
+		}
+		```
+	- Java
+		```java
+		public int binarySearch(int[] array, int target) {
+			int left = 0, right = array.length - 1;
+			while (left <= right) {
+				int mid = left + (right - left) / 2;
+				if (array[mid] == target) return mid;
+				if (array[mid] < target) left = mid + 1;
+				else right = mid - 1;
+			}
+			return -1;
+		}
+		```
