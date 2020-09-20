@@ -174,6 +174,14 @@ https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/
 
 可能会跟动态规划混淆
 
+##### 分发饼干
+https://leetcode-cn.com/problems/assign-cookies/
+
+**实现思路:**
+
+贪心算法
+此贪心的最优选择为: 为孩子分配恰好满足其胃口的最小饼干
+
 ### 本周实战篇
 
 ### 本周打卡篇
