@@ -114,6 +114,7 @@ https://leetcode-cn.com/problems/number-of-islands/
 
 *边界场景:*
 1. 避免访问到网格之外
+2. 提前判断无效的网格，返回0
 
 *使用到的数据结构:*
 数组
@@ -122,6 +123,10 @@ https://leetcode-cn.com/problems/number-of-islands/
 1. 使用深度优先搜索实现
 2. 使用广度优先搜索实现
 3. 了解并使用并查集实现
+
+*潜在的坑:*
+1. 使用`auto& element = queue.front(); queue.pop_front(); element.first; element.second;`获取并移除队列的第一个元素，再对元素进行访问。可能会因为超过 `queue` 的 capacity ，queue 内部删除了元素，导致访问元素操作出现异常
+2. 广度优先搜索的实现涉及元素的创建，可能会带来额外的开销，导致超时
 
 
 ### 本周实战篇
